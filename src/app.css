@@ -1,0 +1,214 @@
+:root {
+	--font-body: 'Inter', sans-serif;
+	--font-mono: monospace;
+	--color-bg-0: #e9e9e9;
+	/* rgb(202, 216, 228); */
+	--color-bg-1: hsl(209, 36%, 86%);
+	--color-bg-2: hsl(224, 44%, 95%);
+	--color-bg-0-dark: #1e1e1e /* hsl(224, 44%, 5%) */;
+	--color-theme-1: #ff3e00;
+	--color-theme-2: #4075a6;
+	--color-text: #1e1e1e /*rgba(0, 0, 0, 0.9)*/;
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+body {
+	background-color: var(--color-bg-0);
+	margin: 0;
+	overflow-x: hidden;
+	font-size: 12pt;
+	line-height: 18pt;
+}
+
+h1,
+h2 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	/* font-size: 2rem; */
+	text-align: center;
+}
+
+h2 {
+	/* font-size: 1.5rem; */
+}
+
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--color-text);
+}
+
+input,
+button {
+	background-color: var(--color-bg-0);
+	padding: 0.75rem 1rem;
+	border-radius: 0;
+	border: 1px solid var(--color-bg-0-dark);
+	font-size: inherit;
+	font-family: inherit;
+	color: var(--color-text);
+}
+
+button {
+	position: relative;
+	cursor: pointer;
+	/* min-width: 100px; */
+	max-width: max-content;
+	white-space: nowrap;
+	overflow: clip;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	.icon {
+		font-size: 1.5rem;
+		line-height: 1rem;
+	}
+}
+
+button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.05);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+button:hover::before {
+	opacity: 1;
+}
+
+button:disabled {
+	opacity: 0.2;
+	cursor: not-allowed;
+}
+
+button.primary {
+	background-color: var(--color-bg-0-dark);
+	border: 1px solid var(--color-text);
+	color: white;
+}
+
+button.secondary {
+	background-color: #bbbbbb;
+	border: 1px solid var(--color-text);
+}
+
+button.no-border {
+	border: none;
+	min-width: 0;
+}
+
+button.no-border::before {
+	opacity: 0;
+}
+
+button.no-border-dark {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	min-width: 0;
+	color: white;
+	font-size: 1.5rem;
+	line-height: 1rem;
+}
+
+button.no-border-clear {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	min-width: 0;
+	/* color: black; */
+	font-size: 1.5rem;
+	line-height: 1rem;
+}
+
+button.dark {
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid white;
+	font-size: inherit;
+	font-family: inherit;
+	color: white;
+}
+
+button.primary-dark {
+	background-color: white;
+	border: 1px solid var(--color-text);
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+button.secondary-dark {
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+	border: 1px solid white;
+}
+
+button.link {
+	background-color: rgba(0, 0, 0, 0);
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+	min-width: 0;
+	/* font-weight: 700; */
+	padding-left: 0;
+	padding-right: 0;
+	text-decoration: underline;
+
+	&.dark {
+		color: white;
+	}
+}
+
+button.link::before {
+	opacity: 0;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+textarea {
+	font-family: var(--font-body);
+}
+
+input.dark {
+	background-color: #444444;
+	color: white;
+}
+
+@media (max-width: 300px) {
+	body {
+		font-size: 10pt;
+		line-height: 16pt;
+	}
+}
