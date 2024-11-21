@@ -2,9 +2,6 @@
 </script>
 
 <div class="wrapper">
-	<div class="logo-wrapper">
-		<img src="200406_discover_logo.svg" />
-	</div>
 	<div class="sections-wrapper">
 		<div class="section">
 			<div class="img-wrapper">
@@ -36,18 +33,76 @@
 				</div>
 			</div>
 		</div>
+		<div class="section">
+			<div class="img-wrapper">
+				<img src="Discover_03.png" />
+			</div>
+			<div class="description">
+				<div class="title"><u>Define</u> objectives and constraints</div>
+				<div class="body">
+					Discover supports both single and multi-objective optimization workflows, and has full
+					support for constraint handling. Objectives and constraints can be easily defined by
+					connecting output values from your models into a special set of <strong>Objective</strong>
+					and <strong>Constraint</strong>
+					components. Context menus within the components allow you to select the type of objective (minimize
+					or maximize), or the type of constraint (less than, greater than, or exactly matching a specified
+					value) you want to use.
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="img-wrapper">
+				<img src="Discover_04.png" />
+			</div>
+			<div class="description">
+				<div class="title"><u>Run</u> optimizations</div>
+				<div class="body">
+					Once you've specified the inputs, objectives, and constraints you wish you use in your
+					model, you can use Discover's web-based interface to run optimization jobs. The <strong
+						>Run Options panel</strong
+					>
+					allows you to specify the parameters of your optimization job, including the number of designs
+					to create in each generation, the number of generations to produce, and the mutation rate to
+					use when generating new designs.
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="img-wrapper">
+				<img src="Discover_05.png" />
+			</div>
+			<div class="description">
+				<div class="title"><u>Reveal</u> complex trade-offs</div>
+				<div class="body">
+					Discover's visualization interface is based around a 4-d scatter plot which you can use to
+					monitor an ongoing optimization or to evaluate the results of a previously run
+					optimization. Each valid design is displayed as a circle, while designs that violate one
+					or more constraints are displayed as hollow squares. The <strong>Explore panel</strong> allows
+					you to map any objective value to the four dimensions of the scatter plot (x-coordinate, y-coordinate,
+					circle size and color). You can also visualize the design or generation number to evaluate
+					optimization trends over time.
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="img-wrapper">
+				<img src="Discover_06_01.png" />
+			</div>
+			<div class="description">
+				<div class="title"><u>Explore</u> a wide space of design</div>
+				<div class="body">
+					Discover supports a bi-directional data flow with your Rhino Grasshopper model. Once an
+					optimization is run, you can use the scatter plot to explore the set of designs in your
+					design space, filter to show only the best-performing designs, and select a set of designs
+					for further analysis. Clicking on any design in the <strong>Designs panel</strong> will automatically
+					regenerate it in your Grasshopper model so you can proceed with the rest of your design workflow.
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
-	.logo-wrapper {
-		max-width: 300px;
-		margin: 1rem auto;
-		padding: 2rem 1rem;
-		display: flex;
-		align-items: flex-start;
-	}
-
 	.sections-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -63,6 +118,7 @@
 				height: 100%;
 				// height: auto; // Maintain aspect ratio
 				object-fit: cover; // Optional: control how the image fits its container
+				border-radius: 16px;
 			}
 
 			.img-wrapper {
@@ -78,7 +134,7 @@
 				// padding: 1rem;
 
 				.title {
-					font-size: 18pt;
+					font-size: 16pt;
 					line-height: 24pt;
 					font-weight: 700;
 				}
@@ -95,6 +151,9 @@
 	@media (max-width: 1000px) {
 		.sections-wrapper {
 			.section {
+				img {
+					border-radius: 0;
+				}
 				.img-wrapper {
 					min-width: 100%;
 					max-width: 100%;
