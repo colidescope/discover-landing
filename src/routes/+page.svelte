@@ -23,7 +23,17 @@
 		</div>
 		<div class="section">
 			<div class="img-wrapper">
-				<img src="Discover_01_3.png" />
+				<img src="Discover_02.png" />
+			</div>
+			<div class="description">
+				<div class="title"><u>Generate</u> input parameters</div>
+				<div class="body">
+					Discover supports a range of input parameter types to drive your generative models. This
+					includes <strong>Continuous</strong> parameters for variables that vary continuously,
+					<strong>Categorical</strong>
+					parameters for values that take on one of several defined options, and a special
+					<strong>Sequence</strong> parameter which defines a unique ordering of a set of items.
+				</div>
 			</div>
 		</div>
 	</div>
