@@ -15,7 +15,7 @@
 
 <style lang="scss">
 	.wrapper {
-		max-width: 500px;
+		max-width: 1000px;
 		margin: 0 auto;
 	}
 </style>
